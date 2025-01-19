@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+.cards {
+     font-family: "Rubik", serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cards .card {
+    width: 200px;
+    height: 250px;
+    background: #6A1E55;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cards .card .content {
+    padding: 5px;
+    z-index: 999;
+}
+
+.cards .card .content h1 {
+    color: #fc0259;
+    margin-bottom: 8px;
+}
+
+.cards .card .content h3 {
+    color: #ffd2ae;
+    border-bottom: 1px solid #ffd2ae93;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.cards .card .content p {
+    max-width: 150px;
+    color: #f0f0f3ba;
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+.cards .card::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    background-image: linear-gradient(90deg, #ffd2ae,  #fc0259);
+    height: 100px;
+    animation: animate 5s linear infinite;
+    transition: all .2s linear;
+}
+
+.cards .card::after {
+    content: '';
+    position: absolute;
+    background: #3B1C32;
+    inset: 6px;
+    border-radius: 8px;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
